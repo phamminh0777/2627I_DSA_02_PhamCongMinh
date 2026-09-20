@@ -1,4 +1,4 @@
-package Week2;
+package Week2.BT;
 import java.util.Arrays;
 
 class BinarySearchFirst{

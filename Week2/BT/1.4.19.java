@@ -1,4 +1,4 @@
-package Week2;
+package Week2.BT;
 class LocalMinimumMatrix {
     public static int[] findLocalMin(int[][] a) {
         return search(a, 0, a.length - 1, 0, a.length - 1);

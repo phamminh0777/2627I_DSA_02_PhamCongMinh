@@ -1,4 +1,4 @@
-package Week2;
+package Week2.BT;
 import java.util.Arrays;
 class CommonElements{
     public static void PrintCommon(int[] a, int[] b) {

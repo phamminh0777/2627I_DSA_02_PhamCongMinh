@@ -1,4 +1,4 @@
-
+package Week2.BT
 import java.util.Arrays;
 class EqualPair{
     public static long countPair(int[] a) {
