@@ -1,0 +1,14 @@
+for(int i = 0; i < n*n; i++)
+    for(int j = i+ 1; j < n*n; j++)
+        for(int k = 1; k <= n * n; k = k* 2) op();
+
+ i chạy từ 0 -> n^2 - 1
+ j chạy từ i + 1 -> n^2 - 1
+
+ tổng số cặp(i, j) là số cách chọn 2 phần tử từ tập n^2 phần tử 
+  = n^2 * (n^2 - 1) / 2 ~ n^4/2
+
+  k nhận giá trị 1, 2, 4, 8, .. k < n^2
+  2^k < n^2 -> k < 2log(n) 
+  tổng số lần gọi op() là:
+  n^4 / 2 * 2log(n) = n^4log(n)

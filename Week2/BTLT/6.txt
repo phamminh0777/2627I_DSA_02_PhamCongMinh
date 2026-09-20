@@ -1,0 +1,3 @@
+f(n) = nlog^2(n) + 3nsqrt(n) - 5n
+
+O(n * sqrt(n))

@@ -1,0 +1,19 @@
+bộ nhớ cho mỗi đối tượng Node(n đối tượng)
+overhead : 16 bytes
+tham chiếu lớp ngoài BTS 8 bytes
+tham chiếu key 8 bytes
+tham chiếu value 8 bytes
+tham chiếu parent 8 bytes
+tham chiếu left 8 bytes
+tham chiếu right 8 bytes
+biến count(int) 4 bytes
+vì tổng là 68 chưa chia hết cho 8 nên ta cộng thêm bộ nhớ đệm 4bytes = 72n bytes
+
+bộ nhớ cho đối tương bst(1 đối tượng duy nhất)
+object overhead = 16 bytes
+root = 8 bytes
+biến n(int) = 4 bytes
+padding = 4bytes
+Bst = 16 + 8 + 4 + 4 = 32 bytes
+
+tổng = 72n + 32~ 72n bytes

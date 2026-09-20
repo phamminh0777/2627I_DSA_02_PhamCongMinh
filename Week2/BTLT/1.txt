@@ -1,0 +1,54 @@
+a, for(int i = 10; i < n + 5; i+=2)
+    op();
+    i tăng từ 10, tăng 2 đơn vị mỗi lần dừng lại khi i >= n + 5
+    số lần lặp = ((n + 5) - 10) / 2 = (n - 5) / 2
+    tilde ~ n/2
+    O(N)
+b, for (int i = 1; i <= n * n * n; i *= 2)
+    op();
+
+    i nhận các giá trị là 1, 2, 4, 8, .. 2^k
+    điều kiện dừng: 2^k <= n^3 -> k <= log(n^3) = 3log(n)
+    tilde ~ 3log(n)
+    O(log(n))
+c, for (int i = 0; i < n; i++)
+    for (int j = 0; j < 100; j++)
+        op();
+    
+    Vòng lặp ngoài chạy n lần
+    Vòng lặp trong chạy cố định 100 lần cho mỗi i.
+    Tổng số lần gọi op() là n * 100 = 100n.
+    Tilde ~ 100n
+    O(N)
+d, for (int i = 0; i * i < n; i++)
+    for (int j = 1; j < n; j *= 3)
+        op();
+    
+    Vòng lặp ngoài: i^2 < n -> i < sqrt(n) -> chạy ~ sqrt(n) lần
+    Vòng lặp trong: j = 1, 3, 9,...<n chạy log3(n) lần
+    Tổng số lần gọi op() là sqrt(n) * log3(n).
+    tilde ~ sqrt(n) * log3(n)
+    O(sqrt(n) * log(n))
+e, for (int i = 0; i < n; i++)
+    for (int j = 1; j < n; j *= 2)
+        op();
+    
+
+    vòng ngoài chạy n lần
+    vòng trong chạy log2(n) lần 
+    tilde ~ n*log2(n)
+    O(nlog(n))
+f, for (int i = 0; i < n; i++)
+    for (int j = 0; j < 100; j++)
+        for (int k = 0; k < n; k++)
+            for (int l = k; l < n; l++)
+                op();
+    
+    hai vòng lặp (i, j) chạy 100n lần
+    hai vòng lặp (k, l) chạy : (n * (n + 1)) / 2
+
+    tổng số lần gọi: 100n * (n * (n + 1)) /2 = 50n^3 + 50n^2
+    Tilde ~ 50n^3
+    O(n^3)
+    
+

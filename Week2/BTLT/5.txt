@@ -1,0 +1,17 @@
+for (int i = 1; i <= n; i++)
+    for (int j = n; j >= i; j--)
+        for (int k = 1; k <= n; k = k + n/100)
+            System.out.println("hello");
+
+giá trị k = 1
+bước nhảy k = k + n / 100
+
+khi m = 100 giá trị k = 1 + 100n/100 = n = 1 > n vi phạm k <= n
+do đó với bất kì giá trị i, j nào thì vòng lặp k luôn chạy đúng 100 lần (1)
+
+i chạy từ 1 -> n
+mỗi vòng i vòng lặp j chạy n giảm xuống đến i(tổng n - i + 1)
+tổng số cặp = n*(n+1) / 2         (2)
+
+tổng số lần in hello = (1) * (2) = 50n^2 + 50n
+Tilde ~ 50n^2
