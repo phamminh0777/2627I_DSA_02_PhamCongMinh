@@ -51,6 +51,6 @@ class FibonacciSearchDecreasing {
 
         int key = sc.nextInt();
 
-        System.out.println("idx: " + search(a, key));
+        System.out.println("idx= " + search(a, key));
     }
 }
